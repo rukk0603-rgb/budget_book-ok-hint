@@ -1,25 +1,40 @@
 @charset "utf-8";
 
 
-
+@media (max-width: 600px) {
 h1 {
   text-align: center;
   margin: 0 0 48px;
   border-bottom: 1px solid #ddd;
-  padding: 4px 0 16px;
+  padding: 4px 0 24px;
+  background: 
 }
 
 main {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
-textarea {
-  font-size: 16px;
+div {
+  margin: 16px;
 }
 
-h2 {
-  font-size: 16px;
+
+button {
+  all: unset;
+  border-radius: 50%;
+  width: 124px;
+  height: 124px;
+  box-shadow: 12px #ddd;
+  border: 2px solid black;
+  cursor: pointer;
+  text-align: center;
+  font-size: 24px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+
+
 }
 
 footer {
@@ -28,4 +43,5 @@ footer {
   gap: 128px;
   margin-top: 48px;
   border-top: 1px solid #ddd;
+}
 }
