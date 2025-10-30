@@ -9,32 +9,64 @@
 </head>
 
 <body>
+
+    <button id="history">履歴</button>
+    <div id="sidebar">
+     <dl>
+      <dt id="foodH">
+        食費
+      </dt>
+      <dt id="transH">交通費</dt>
+      <dt id="dailyH">日用品</dt>
+      <dt id="peopleH">交際費</dt>
+      <dt id="hobbyH">趣味</dt>
+      <dt id="otherH">その他</dt>
+     </dl>
+    </div>
+    <div id="overlay"></div>
   <header>
     <h1>今日の家計簿</h1>
   </header>
+
   <main>
     <div>
-      <button id="food">食費</button>
+      <button id="food" class="menu" data-type="food">食費</button>
     </div>
     <div>
-      <button id="trans">交通費</button>
+      <button id="trans" class="menu" data-type="trans">交通費</button>
     </div>
     <div>
-      <button id="daily">日用品</button>
+      <button id="daily" class="menu" data-type="daily">日用品</button>
+    </div>
+    <div id="form" class="hidden">
+      <input class="inMenu" id="kind" type="text" placeholder="品名">
+      <input type="number" id="amount" inputmode="numeric" pattern="[0-9]*" placeholder="金額">
+
+      <button id="comp">完了</button>
     </div>
     <div>
-      <button id="people">交際費</button>
+      <button id="people" class="menu" data-type="people">交際費</button>
     </div>
     <div>
-    <button id="hobby">趣味</button>
+    <button id="hobby" class="menu" data-type="hobby">趣味</button>
     </div>
     <div>
-      <button id="other">その他</button>
+      <button id="other" class="menu" data-type="other">その他</button>
     </div>
+
+    
   </main>
   <footer>
-
+    <div id="aim" class="btm">
+      <h2>目標支出</h2>
+      <input class="inFoot" type="number">
+    </div>
+    <div id="real" >
+      <h2>今日の支出</h2>
+    </div>
   </footer>
+
+    
 
 
   <script src="main.js"></script>
