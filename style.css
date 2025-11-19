@@ -159,7 +159,7 @@ h2 {
   align-items: center;
 }
 
-#amount {
+/* #amount {
   width: auto;
   height: 45px;
   padding: 10px;
@@ -181,7 +181,17 @@ h2 {
   background-color: transparent;
   transition: 0.3s;
   transform: translateY(-16px);
+} */
+
+#amount, #kind {
+  box-sizing: border-box;
+  height: 45px;
+  line-height: 45px;
+  padding: 0 10px;     
+  -webkit-appearance: none;
+  appearance: none;
 }
+
 
 #comp {
   position: absolute;
