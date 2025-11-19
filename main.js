@@ -27,7 +27,7 @@
 btns.forEach(btn => {
   btn.addEventListener('click', () => {
     selectedType = btn.id; 
-    form.classList.remove('hidden');
+    form.classList.add('show');
     kind.value = '';
     amount.value = '';
   });
@@ -36,7 +36,7 @@ btns.forEach(btn => {
 comp.addEventListener('click', () => {
   const kindValue = kind.value.trim() || "未分類";
   const amountValue = amount.value.trim();
-  form.classList.add('hidden');
+  form.classList.remove('show');
   if (!amountValue) return;
 
   const dd = document.createElement('dd');

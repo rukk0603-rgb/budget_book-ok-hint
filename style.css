@@ -1,15 +1,15 @@
 @charset "utf-8";
 
 
-@media (max-width: 600px) {
+/* @media (max-width: 600px) { */
 
-  html {
-    background-color: #FFFDE7;
-  }
+html {
+  background-color: #FFFDE7;
+}
 
-  #sidebar {
-    margin: 0;
-    width: 80%;
+#sidebar {
+  margin: 0;
+  width: 80%;
   height: 100vh;
   background-color: #eee;
   color: white;
@@ -19,13 +19,13 @@
   transition: 0.3s;
   z-index: 1500;
   color: black;
-  }
+}
 
-  #sidebar.active {
-    right: 0;
-  }
+#sidebar.active {
+  right: 0;
+}
 
-  #overlay {
+#overlay {
   position: fixed;
   top: 0;
   left: 0;
@@ -42,179 +42,186 @@
   pointer-events: auto;
 }
 
-  #history {
-    position: absolute;
-    right: 36px;
-    top: 20px;
-    cursor: pointer;
-    width: 52px;
-    height: 36px;
-    border-radius: 10px;
-    border: 1px solid;
-  }
+#history {
+  position: absolute;
+  right: 36px;
+  top: 20px;
+  cursor: pointer;
+  width: 52px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid;
+}
 
-  dt {
-    margin: 48px 0 0 0;
-    font-size: 20px;
-    font-family: "Noto Sans JP", sans-serif;
-  }
+dt {
+  margin: 48px 0 0 0;
+  font-size: 20px;
+  font-family: "Noto Sans JP", sans-serif;
+}
 
-  h1 {
-    text-align: center;
-    margin: 0 0 48px;
-    padding: 4px 0 24px;
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 550;
-    color: #795548;
-    border-bottom: 2px solid #ddd;
-  }
+h1 {
+  text-align: center;
+  margin: 0 0 48px;
+  padding: 4px 0 24px;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 550;
+  color: #795548;
+  border-bottom: 2px solid #ddd;
+}
 
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-  }
-
-  div {
-    margin: 0 16px 32px;
-  }
-
-
-  .menu {
-    all: unset;
-    border-radius: 50%;
-    width: 124px;
-    height: 124px;
-    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
-    border: 1px solid black;
-    cursor: pointer;
-    text-align: center;
-    font-size: 24px;
-    font-family: "M PLUS Rounded 1c", sans-serif;
-  }
-
-  button:active {
-    box-shadow: 0 0 0;
-  }
-
-  #food {
-    background-color: #FFCC80;
-  }
-
-  #trans {
-    background-color: #B3E5FC;
-  }
-
-  #daily {
-    background-color: #F8BBD0;
-  }
-
-
-  #people {
-    background-color: #C8E6C9;
-  }
-
-  #hobby {
-    background-color: #E57373;
-  }
-
-  #other {
-    background-color: #E0E0E0;
-  }
-
-  footer {
-    display: flex;
-    justify-content: center;
-    gap: 128px;
-    margin-top: 48px;
-    border-top: 2px solid #ddd;
-  }
-
-  h2 {
-    font-family: "Noto Sans JP", sans-serif;
-    font-weight: 400;
-  }
-
-  .hidden {
-    display: none;
-  }
-
-  #form {
-    position: absolute;
-    margin-top: 80px;
-    background-color: white;
-    border-radius: 12px;
-    width: 80%;
-    height: 160px;
-  }
-
-  #comp {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    width: 72px;
-    height: 32px;
-    border: 2px solid #888;
-    border-radius: 8px;
-    background-color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 16px;
-    font-family: sans-serif;
-    white-space: nowrap;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    border: 1px solid;
-  }
-
-  #comp:active {
-    box-shadow: 0 0 0;
-  }
-
-  .inMenu {
-    padding: 20px;
-    margin: 20px;
-  }
-
-  #amount {
-    width: 180px;
-    height: 45px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #aaa;
-    background-color: transparent;
-    transition: 0.3s;
-  }
-
-  #kind {
-    width: 60px;
-    height: 45px;
-    padding: 10px;
-    font-size: 16px;
-    border: none;
-    border-bottom: 2px solid #aaa;
-    background-color: transparent;
-    transition: 0.3s;
-  }
-
-  input:focus {
-    border-bottom-color: #ff7f50;
-    box-shadow: 0 2px 5px rgba(255, 127, 80, 0.3);
-  }
-
-  footer {
-    gap: 48px;
-  }
-
-  .inFoot {
-    padding: 8px;
-    font-size: 18px;
-    border-radius: 8px;
-    width: 50%;
-  }
-
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
 }
+
+div {
+  margin: 0 16px 32px;
+}
+
+
+.menu {
+  all: unset;
+  border-radius: 50%;
+  width: 124px;
+  height: 124px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
+  border: 1px solid black;
+  cursor: pointer;
+  text-align: center;
+  font-size: 24px;
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+button:active {
+  box-shadow: 0 0 0;
+}
+
+#food {
+  background-color: #FFCC80;
+}
+
+#trans {
+  background-color: #B3E5FC;
+}
+
+#daily {
+  background-color: #F8BBD0;
+}
+
+
+#people {
+  background-color: #C8E6C9;
+}
+
+#hobby {
+  background-color: #E57373;
+}
+
+#other {
+  background-color: #E0E0E0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 128px;
+  margin-top: 48px;
+  border-top: 2px solid #ddd;
+}
+
+h2 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+
+.hidden {
+  display: none;
+}
+.show {
+  display: flex;
+}
+
+/* .inMenu {
+    padding: 20px;
+    margin: 20px;
+  } */
+
+#form {
+  position: absolute;
+  background-color: white;
+  border-radius: 12px;
+  width: 80%;
+  height: 240px;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+#amount {
+  width: auto;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  background-color: transparent;
+  transition: 0.3s;
+  transform: translateY(-16px);
+}
+
+#kind {
+  width: auto;
+  height: 45px;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  background-color: transparent;
+  transition: 0.3s;
+  transform: translateY(-16px);
+}
+
+#comp {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  width: 72px;
+  height: 32px;
+  border: 2px solid #888;
+  border-radius: 8px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: sans-serif;
+  white-space: nowrap;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  border: 1px solid;
+}
+
+#comp:active {
+  box-shadow: 0 0 0;
+}
+
+
+input:focus {
+  border-bottom-color: #ff7f50;
+  box-shadow: 0 2px 5px rgba(255, 127, 80, 0.3);
+}
+
+footer {
+  gap: 48px;
+}
+
+.inFoot {
+  padding: 8px;
+  font-size: 18px;
+  border-radius: 8px;
+  width: 50%;
+}
+
+
