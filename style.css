@@ -154,34 +154,11 @@ h2 {
   border-radius: 12px;
   width: 80%;
   height: 240px;
-  gap: 12px;
+  gap: 4px;
   justify-content: center;
   align-items: center;
+  border-radius: 24px;
 }
-
-/* #amount {
-  width: auto;
-  height: 45px;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 2px solid #aaa;
-  background-color: transparent;
-  transition: 0.3s;
-  transform: translateY(-16px);
-}
-
-#kind {
-  width: auto;
-  height: 45px;
-  padding: 10px;
-  font-size: 16px;
-  border: none;
-  border-bottom: 2px solid #aaa;
-  background-color: transparent;
-  transition: 0.3s;
-  transform: translateY(-16px);
-} */
 
 #amount, #kind {
   box-sizing: border-box;
@@ -191,7 +168,6 @@ h2 {
   -webkit-appearance: none;
   appearance: none;
 }
-
 
 #comp {
   position: absolute;
@@ -224,7 +200,13 @@ input:focus {
 }
 
 footer {
-  gap: 48px;
+  display: flex;
+  justify-content: space-evenly;
+  gap: 8px;
+}
+
+#aim, #real {
+  text-align: center;
 }
 
 .inFoot {
