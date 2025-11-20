@@ -205,8 +205,8 @@ footer {
   gap: 8px;
 }
 
-#aim, #real {
-  text-align: center;
+#real {
+  white-space: nowrap;
 }
 
 .inFoot {
