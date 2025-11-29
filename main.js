@@ -24,46 +24,68 @@
   let selectedType = '';
   const comp = document.getElementById('comp');
 
-btns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    selectedType = btn.id; 
-    form.classList.add('show');
-    kind.value = '';
-    amount.value = '';
-  });
-});
+  function saveHistory() {
+    const dl = document.querySelector('dl')
+    localStorage.setItem("userMoney", dl.innerHTML);
+  };
 
-comp.addEventListener('click', () => {
-  const kindValue = kind.value.trim() || "未分類";
-  const amountValue = amount.value.trim();
-  form.classList.remove('show');
-  if (!amountValue) return;
-
-  const dd = document.createElement('dd');
-  dd.textContent = `${kindValue} : ${amountValue}円`;
-
-  // ✅削除機能追加
-  dd.addEventListener('click', () => {
-    dd.remove();
-    saveHistory();
-  });
-
-  switch (selectedType) {
-    case "food": foodH.appendChild(dd); break;
-    case "trans": transH.appendChild(dd); break;
-    case "daily": dailyH.appendChild(dd); break;
-    case "people": peopleH.appendChild(dd); break;
-    case "hobby": hobbyH.appendChild(dd); break;
-    case "other": otherH.appendChild(dd); break;
+  function loadHistory() {
+    const saved = localStorage.getItem("userMoney");
+    if (saved) {
+      document.querySelector("dl").innerHTML = saved;
+      const dds = document.querySelectorAll('dd');
+      dds.forEach(dd => {
+        dd.addEventListener('click', () => {
+          if (confirm('削除しますか？')) {
+            dd.remove();
+            saveHistory();
+          }
+        });
+      });
+    }
   }
 
-  // ✅入力欄リセット
-  kind.value = "";
-  amount.value = "";
-  form.classList.add('hidden');
+  loadHistory();
 
-  saveHistory(); // ✅保存
-});
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      selectedType = btn.id;
+      form.classList.add('show');
+      kind.value = '';
+      amount.value = '';
+    });
+  });
+
+  comp.addEventListener('click', () => {
+    const kindValue = kind.value.trim() || "未設定";
+    const amountValue = amount.value.trim();
+    form.classList.remove('show');
+    if (!amountValue) return;
+
+    const dd = document.createElement('dd');
+    dd.textContent = `${kindValue} : ${amountValue}円`;
+    dd.addEventListener('click', () => {
+          if (confirm('削除しますか？')) {
+            dd.remove();
+            saveHistory();
+          }
+        });
+
+    switch (selectedType) {
+      case "food": foodH.appendChild(dd); break;
+      case "trans": transH.appendChild(dd); break;
+      case "daily": dailyH.appendChild(dd); break;
+      case "people": peopleH.appendChild(dd); break;
+      case "hobby": hobbyH.appendChild(dd); break;
+      case "other": otherH.appendChild(dd); break;
+    }
+
+    kind.value = "";
+    amount.value = "";
+    form.classList.add('hidden');
+
+    saveHistory();
+  });
 
 
 
