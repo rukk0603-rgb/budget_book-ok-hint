@@ -10,6 +10,7 @@
 
 <body>
 
+  <button id="reset">リセット</button>
   <button id="history">履歴</button>
   <div id="sidebar">
     <dl>
@@ -59,10 +60,11 @@
   <footer>
     <div id="aim" class="btm">
       <h2>目標支出</h2>
-      <input class="inFoot" type="number">
+      <input class="inFoot" id="aimInput" type="number" placeholder="今日の目標額">
     </div>
     <div id="real">
       <h2>今日の支出</h2>
+      <div id="todayExp"></div>
     </div>
   </footer>
 
